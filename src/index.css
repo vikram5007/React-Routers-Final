@@ -1,3 +1,23 @@
+@font-face {
+  font-family: akira;
+  src: url('../src/FONTS/akira_expanded/Akira\ Expanded\ Demo.otf');
+}
+
+@font-face {
+  font-family: nexa;
+  src: url('./FONTS/nexa/Nexa-Heavy.ttf');
+}
+
+@font-face {
+  font-family: delight;
+  src: url('../src/FONTS/delight_sunset/Delight\ Sunset.otf');
+}
+
+@font-face {
+  font-family: stroke;
+  src: url('../src/FONTS/stretch_pro/StretchPro.otf');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +25,236 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(54, 9, 121, 1) 37%, rgba(124, 0, 255, 1) 100%);
+  background-repeat: no-repeat;
+  height: 1500px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.Heading {
+  font-family: akira;
+  font-size: 35px;
+  color: white;
+  margin-top: 80px;
+}
+
+.Heading2 {
+  font-family: delight;
+  font-size: 35px;
+  color: white;
+  margin-top: -30px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.Headdiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  height: 100px
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  position: relative;
+  top: 50px;
+}
+
+.link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: all .1s ease-in-out;
+  font-family: nexa;
+}
+
+.link:hover {
+  background-color: rgb(0, 204, 255);
+  border-radius: 10px;
+  color: black;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavBox {
+  position: relative;
+  top: 25px;
+}
+
+#inp {
+  position: relative;
+  top: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid black;
+  transition: all .1s ease-in-out;
+  outline: 0px solid grey;
+  font-family: nexa;
+  width: 150px;
+  height: 30px;
+}
+
+#inp::placeholder {
+  transition: all .5s ease-in-out;
+  transform: translateY(0px);
+  text-align: center;
+  opacity: 1;
+  user-select: none;
+}
+
+#inp:focus::placeholder {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
+#inp:focus {
+  filter: drop-shadow(0px 0px 10px rgba(178, 12, 219, 0.753));
+  width: 500px;
+  text-indent: 3px;
+}
+
+.Contents {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.ptitle {
+  padding: 0px;
+  font-family: Nexa;
+  color: rgb(111, 1, 184);
+  font-size: 25px;
+  margin-top: 0px;
+  padding-top: 25px;
+  padding-left: 5px;
+}
+
+.pbody {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(115, 0, 182);
+  font-size: 13px;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+#postholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#posts {
+  position: relative;
+  top: 50px;
+  background-color: rgb(214, 214, 214);
+  padding-bottom: 25px;
+  width:90vw;
+  filter: drop-shadow(0 0 10px black);
+}
+
+.container {
+  position: relative;
+  top: 50px;
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 80%;
+  filter: drop-shadow(0px 0px 5px black);
+}
+
+.postform {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.Formhead {
+  font-family: nexa;
+  color: rgb(115, 0, 182);
+  letter-spacing: 5px;
+}
+
+.postform label {
+  font-family: nexa;
+
+}
+
+#frminp {
+  margin-top: 15px;
+  position: relative;
+  width: 250px;
+  ;
+}
+
+#frminp::placeholder {
+  font-size: 15px;
+  text-align: center;
+  font-family: nexa;
+  transition: all .5s ease-in-out;
+  transform: translateY(0px);
+}
+
+#frminp:focus::placeholder {
+  transform: translateY(-20px);
+  opacity: 1;
+
+}
+
+#sbmbtn {
+  position: relative;
+  top: 25px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-family: nexa;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: all .5s;
+  height: 50px;
+  width: 75px;
+}
+
+#sbmbtn:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  box-shadow: rgba(137, 46, 240, 0.856) -5px 5px, rgba(153, 46, 240, 0.3) -10px 10px, rgba(185, 46, 240, 0.521) -15px 15px, rgba(195, 46, 240, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+
+.postlink{
+  text-decoration: none;
+}
+
+.Editarea{
+  display: flex;
+  justify-content:flex-end;
+
+  
+
 }
